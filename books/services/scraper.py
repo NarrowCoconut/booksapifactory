@@ -47,27 +47,7 @@ class AmazonScrape():
         self.scrape_dict['image'] = image
         return(image)
     
-    '''
-    description = driver.find_element(By.ID, 'productDescription').text
-    rating = driver.find_element(By.ID, 'acrCustomerReviewText').text
-    image = driver.find_element(By.ID, 'imgBlkFront').get_attribute('src')
-    '''
-
-def scrape_amazon(url):
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-    driver = webdriver.Chrome(options=options)
-    driver.get(url)
-    title = driver.find_element(By.ID, 'productTitle').text
-    #description = driver.find_element(By.ID, 'productDescription').text
-    #rating = driver.find_element(By.ID, 'acrCustomerReviewText').text
-    #image = driver.find_element(By.ID, 'imgBlkFront').get_attribute('src')
-    driver.quit()
-    return {'title': title, 
-    # 'description': description, 'rating': rating, 'image': image, 
-    'url': url
-    }
-
+    
 scraper = AmazonScrape("https://www.amazon.com/Python-Crash-Course-Hands-Project-Based/dp/1593279280/ref=sr_1_1?dchild=1&keywords=python+crash+course&qid=1605078487&sr=8-1")
 print("\n\n", scraper.get_title())
 print(scraper.get_description())
