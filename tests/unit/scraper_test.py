@@ -1,16 +1,8 @@
 import pytest
 
 #  tests the scraper.py file
-from books.services.scraper import scrape_amazon #  tests the scrape_amazon function
 from books.services.scraper import AmazonScrape # tests the AmazonScraper class
 # TODO: separate into multiple tests
-def test_scrape_amazon_title():
-    #  test the scraper with a valid url
-    url = 'https://www.amazon.com/Python-Crash-Course-Hands-Project-Based/dp/1593279280/ref=sr_1_1?dchild=1&keywords=python+crash+course&qid=1605078487&sr=8-1'
-    result = scrape_amazon(url)
-    assert result['title'] == 'Python Crash Course, 2nd Edition: A Hands-On, Project-Based Introduction to Programming'
-
-
 
 py_crash_url = "https://www.amazon.com/Python-Crash-Course-Hands-Project-Based/dp/1593279280/ref=sr_1_1?dchild=1&keywords=python+crash+course&qid=1605078487&sr=8-1"
 scraper = AmazonScrape(py_crash_url)

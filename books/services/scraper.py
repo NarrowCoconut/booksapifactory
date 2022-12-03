@@ -47,7 +47,7 @@ class AmazonScrape():
         self.scrape_dict['image'] = image
         return(image)
     
-    
+
 scraper = AmazonScrape("https://www.amazon.com/Python-Crash-Course-Hands-Project-Based/dp/1593279280/ref=sr_1_1?dchild=1&keywords=python+crash+course&qid=1605078487&sr=8-1")
 print("\n\n", scraper.get_title())
 print(scraper.get_description())
