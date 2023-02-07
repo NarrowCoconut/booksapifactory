@@ -1,5 +1,8 @@
 # admin page
 # has a form for adding, removing, and editing books
+from flask import Blueprint
+bp = Blueprint('admin', __name__)
+
 @bp.route('/admin', methods=['GET', 'POST'])
 def admin():
     form = BookForm()

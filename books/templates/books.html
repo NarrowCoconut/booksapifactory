@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div>
-        <h1>{{title}}</h1>
-        <div>{{image}}</div>
-        <h3>{{rating}}</h3>
-        <p>{{description}}</p>
-    </div>
+    {% for book in books %}
+        <div>
+            <h1>{{ book['title'] }}</h1>
+            <h2>{{ book['author'] }}</h2>
+
+            <h3>{{ book['rating'] }}</h3>
+            <p>{{book['description'] }}</p>
+        </div>
+    {% endfor %}
 {% endblock %}
